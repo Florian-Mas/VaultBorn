@@ -329,7 +329,8 @@ Les contributions sont les bienvenues ! Pour contribuer :
 **Projet VaultBorn**
 
 Développé dans le cadre d'un projet académique  
-Étudiant en développement de jeux vidéo
+📧 Contact : [fmassart2002@gmail.com]  
+🔗 GitHub : [Florian MASSART](https://github.com/Florian-Mas).
 
 📧 Contact : [ouisolclems@gmail.com]  
 🔗 GitHub : [Soleil OUISOL](https://github.com/Soleil-Clems)
