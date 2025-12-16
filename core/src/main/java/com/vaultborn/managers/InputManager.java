@@ -21,13 +21,13 @@ public class InputManager {
 
 
     public InputManager(){
-        this.left = "Left";
-        this.right = "Right";
+        this.left = "A";
+        this.right = "D";
         this.jump = "Space";
-        this.attack = "A";
+        this.attack = "Q";
         this.inventory = "I";
-        this.attack2 = "Q";
-        this.attack3 = "D";
+        this.attack2 = "W";
+        this.attack3 = "E";
         this.attack4 = "S";
         inputList = new LinkedHashMap<String,String>(){{
             put("left", left);

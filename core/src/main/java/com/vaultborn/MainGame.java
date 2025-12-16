@@ -25,6 +25,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.vaultborn.world.BaseWorld;
+import com.vaultborn.world.DungeonWorld;
 import com.vaultborn.world.ForestWorld;
 import com.vaultborn.world.HellWorld;
 import com.vaultborn.screens.IntroScreen;
@@ -39,6 +40,7 @@ public class MainGame extends Game {
 
     public BaseWorld hellWorld;
     public BaseWorld forestWorld;
+    public BaseWorld dungeonWorld;
     public Player player;
     private Skin btnSkin;
     public BaseWorld currentWorld;
@@ -142,6 +144,7 @@ public class MainGame extends Game {
 
         forestWorld = new ForestWorld(this);
         hellWorld = new HellWorld(this);
+        dungeonWorld = new DungeonWorld(this);
 
 
         if (data.worldName.contains("Hell") || data.worldName.contains("hell")) {
@@ -152,6 +155,7 @@ public class MainGame extends Game {
 
 
         forestWorld.linkWorlds();
+        dungeonWorld.linkWorlds();
         hellWorld.linkWorlds();
 
 

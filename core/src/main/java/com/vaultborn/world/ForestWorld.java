@@ -64,9 +64,10 @@ public class ForestWorld extends BaseWorld {
         gameObjects.add(factory.createObject("legplate", 8000, 600, null,1));
         gameObjects.add(factory.createObject("gauteletplate", 12000, 800, null,1));
 
-        SpecialDoor door = (SpecialDoor) factory.createSpecialDoor("special_door", 12100, 700, this, game.hellWorld);
+        SpecialDoor door = (SpecialDoor) factory.createSpecialDoor("special_door", 12100, 700, this, game.dungeonWorld);
         door.setParentWorld(this);
-        door.setSpawnPosition(550, 3800); // Position d'arrivée dans HellWorld
+        door.setSpawnPosition(350, 200); // Position d'arrivée dans Dungeon au début
+        //door.setSpawnPosition(1856, 3394); // Position d'arrivée dans Dungeon à l'arrivé
         gameObjects.add(door);
     }
 
@@ -75,7 +76,7 @@ public class ForestWorld extends BaseWorld {
         for (GameObject obj : gameObjects) {
             if (obj instanceof SpecialDoor) {
                 SpecialDoor door = (SpecialDoor) obj;
-                door.setTargetWorld(game.hellWorld);
+                door.setTargetWorld(game.dungeonWorld);
             }
         }
     }
