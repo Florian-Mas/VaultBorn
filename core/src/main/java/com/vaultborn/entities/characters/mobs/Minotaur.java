@@ -8,9 +8,9 @@ import com.vaultborn.entities.characters.Character;
 public class Minotaur extends Mob{
     public Minotaur(Vector2 position, TextureRegion texture, int lvl) {
         super(position, texture, "Gorm", lvl, 50);
-        this.hp = 100*lvl;
-        this.damage = 20*lvl;
-        this.defense = 15*lvl;
+        this.hp = 200*lvl;
+        this.damage = 10*lvl;
+        this.defense = 10*lvl;
         this.level = lvl;
         this.agility = 10*lvl;
         this.range = 1;

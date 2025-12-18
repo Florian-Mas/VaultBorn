@@ -53,7 +53,7 @@ public abstract class Character extends Entity {
     /**
      * Points de vie maximum.
      */
-    protected int maxHp = 100;
+    protected int maxHp = hp;
 
     /**
      * Défense réduisant les dégâts reçus.
@@ -426,6 +426,11 @@ public abstract class Character extends Entity {
             onGround = false;
         }
 
+        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("M"))) {
+            System.out.println(player.getPosition());
+            //this.setPosition(new Vector2(11500,800));
+        }
+
         moveAndCollide(moveX * speed * delta, velocityY * delta);
     }
 
@@ -463,6 +468,7 @@ public abstract class Character extends Entity {
         } else {
             this.hp -= amount - this.defense;
         }
+        //System.out.println(amount-this.defense);
 
         if (this.hp <= 0) {
             this.hp = 0;
@@ -607,6 +613,7 @@ public abstract class Character extends Entity {
                     }
                     if (target != null && !target.isDead && target != this) {
                         attack(target);
+                        //System.out.println(target.getHp());
                         hasHit = true;
                         if (target.getHp() <= 0 && !(target instanceof Player)) {
                             player.expGain(mob.giveExp());

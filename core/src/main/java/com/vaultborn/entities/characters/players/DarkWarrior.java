@@ -29,7 +29,7 @@ public class DarkWarrior extends Player {
         this.defense = 6;
         this.level = 1;
         this.agility = 2;
-        this.range = 1;
+        this.range = 2;
     }
 
     /**

@@ -90,6 +90,9 @@ public abstract class Mob extends Character {
         this.defense = this.defense*2;
         this.range = 5;
         this.isBoss = true;
+        /*System.out.println("hp : "+this.hp);
+        System.out.println("damage : "+this.damage);
+        System.out.println("defense : "+this.defense);*/
     }
 
     @Override
@@ -102,7 +105,12 @@ public abstract class Mob extends Character {
     }
 
     public int giveExp() {
-        return exp;
+        if (lvl == 1){
+            return exp;
+        }
+        else{
+            return Math.round(exp*7/10);
+        }
     }
 
     private void renderHealthBar(SpriteBatch batch) {
