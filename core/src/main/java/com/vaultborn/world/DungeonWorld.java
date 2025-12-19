@@ -26,8 +26,8 @@ public class DungeonWorld extends BaseWorld{
         boss.setBoss();
         mobs.add(boss);
 
-        mobs.add(factory.createMob("gorgon", 1200, 400, this, 1));
-        mobs.add(factory.createMob("gorgon", 880, 400, this, 1));
+        //mobs.add(factory.createMob("gorgon", 1200, 400, this, 1));
+        //mobs.add(factory.createMob("gorgon", 880, 400, this, 1));
     }
 
     @Override

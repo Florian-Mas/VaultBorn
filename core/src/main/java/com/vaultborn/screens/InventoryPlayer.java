@@ -50,6 +50,8 @@ public class InventoryPlayer {
     private Player player;
     private boolean putIn;
     Item<? extends Stuff> nonItemEquip = new Item<>(null, Item.Type.EQUIPMENT);
+    //cheat item pour debug
+    Item<? extends Stuff> cheat = new Item<>(new Sword(new Vector2(0,0),new TextureRegion(new Texture("objects/weapons/sword.png")), 10000000), Item.Type.EQUIPMENT);
 
     //list
     private LinkedHashMap<Item<? extends Stuff>,Integer> InventoryItem;
@@ -472,6 +474,9 @@ public class InventoryPlayer {
             this.showInventory = !showInventory;
         }
 
+        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("Numpad 0"))) {
+            //addInventory(cheat.getObject());
+        }
 
     }
 

@@ -17,6 +17,7 @@ import com.vaultborn.factories.Factory;
 import com.vaultborn.factories.FactoryException;
 import com.vaultborn.world.BaseWorld;
 
+import java.security.Key;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -426,8 +427,11 @@ public abstract class Character extends Entity {
             onGround = false;
         }
 
-        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("M"))) {
-            System.out.println(player.getPosition());
+        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("1"))) {
+            //this.setPosition(new Vector2(11500,800));
+        }
+        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf(";"))) {
+            //System.out.println(player.getPosition());
             //this.setPosition(new Vector2(11500,800));
         }
 
