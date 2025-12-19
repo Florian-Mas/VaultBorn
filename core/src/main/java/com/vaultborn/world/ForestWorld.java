@@ -21,7 +21,7 @@ public class ForestWorld extends BaseWorld {
 
     @Override
     protected void initMobs() throws FactoryException {
-        Mob boss = factory.createMob("minotaur", 11500, 800, this, 5);
+        Mob boss = factory.createMob("minotaur", 11500, 800, this, 10);
         boss.setBoss();
         mobs.add(boss);
 //        mobs.add(factory.createMob("gorgon", 500, 580, this));

@@ -9,6 +9,7 @@ public class Minotaur extends Mob{
     public Minotaur(Vector2 position, TextureRegion texture, int lvl) {
         super(position, texture, "Gorm", lvl, 50);
         this.hp = 200*lvl;
+        this.maxHp = hp;
         this.damage = 10*lvl;
         this.defense = 10*lvl;
         this.level = lvl;

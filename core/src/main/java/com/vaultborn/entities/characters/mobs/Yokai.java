@@ -9,6 +9,7 @@ public class Yokai extends Mob{
     public Yokai(Vector2 position, TextureRegion texture, int lvl) {
         super(position, texture, "Yokai", lvl, 33);
         this.hp = 100*lvl;
+        this.maxHp = hp;
         this.damage = 4*lvl;
         this.defense = 5*lvl;
         this.level = lvl;

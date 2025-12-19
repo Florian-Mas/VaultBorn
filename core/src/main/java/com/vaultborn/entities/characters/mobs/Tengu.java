@@ -9,6 +9,7 @@ public class Tengu extends Mob{
     public Tengu(Vector2 position, TextureRegion texture, int lvl) {
         super(position, texture, "Tengu", lvl, 100);
         this.hp = 200*lvl;
+        this.maxHp = hp;
         this.damage = 40*lvl;
         this.defense = 55*lvl;
         this.level = lvl;
