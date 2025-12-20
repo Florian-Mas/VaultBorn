@@ -35,9 +35,11 @@ import com.vaultborn.entities.stuff.Stuff;
 import com.vaultborn.entities.stuff.weapon.Sword;
 import com.vaultborn.entities.stuff.weapon.Weapon;
 import com.vaultborn.entities.stuff.armor.Armor;
+import com.vaultborn.entities.stuff.armor.Helmet;
 import com.vaultborn.entities.stuff.armor.Breastplate;
-import com.vaultborn.entities.stuff.armor.Hat;
-import com.vaultborn.entities.stuff.armor.Robe;
+import com.vaultborn.entities.stuff.armor.LegPlate;
+import com.vaultborn.entities.stuff.armor.GauteletPlate;
+import com.vaultborn.entities.stuff.armor.IronFoot;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -51,7 +53,35 @@ public class InventoryPlayer {
     private boolean putIn;
     Item<? extends Stuff> nonItemEquip = new Item<>(null, Item.Type.EQUIPMENT);
     //cheat item pour debug
-    Item<? extends Stuff> cheat = new Item<>(new Sword(new Vector2(0,0),new TextureRegion(new Texture("objects/weapons/sword.png")), 10000000), Item.Type.EQUIPMENT);
+    Item<? extends Stuff> cheatW = new Item<>(new Sword(new Vector2(0,0),new TextureRegion(new Texture("objects/weapons/sword.png")), 10000000), Item.Type.EQUIPMENT);
+    Item<? extends Stuff> cheatA = new Item<>(new Breastplate(new Vector2(0,0),new TextureRegion(new Texture("objects/armor/Breastplate.png")),"oups", 10000000), Item.Type.EQUIPMENT);
+    //item map1 + lvl for dev
+    Item<? extends Stuff> map1H = new Item<>(new Helmet(new Vector2(0,0),new TextureRegion(new Texture("objects/armor/Helmet.png")),"oups", 4), Item.Type.EQUIPMENT);
+    Item<? extends Stuff> map1G = new Item<>(new GauteletPlate(new Vector2(0,0),new TextureRegion(new Texture("objects/armor/GauteletPlate.png")),"oups", 5), Item.Type.EQUIPMENT);
+    Item<? extends Stuff> map1B = new Item<>(new Breastplate(new Vector2(0,0),new TextureRegion(new Texture("objects/armor/Breastplate.png")),"oups", 5), Item.Type.EQUIPMENT);
+    Item<? extends Stuff> map1L = new Item<>(new LegPlate(new Vector2(0,0),new TextureRegion(new Texture("objects/armor/LegPlate.png")),"oups", 4), Item.Type.EQUIPMENT);
+    Item<? extends Stuff> map1F = new Item<>(new IronFoot(new Vector2(0,0),new TextureRegion(new Texture("objects/armor/IronFoot.png")),"oups", 1), Item.Type.EQUIPMENT);
+    Item<? extends Stuff> map1S = new Item<>(new Sword(new Vector2(0,0),new TextureRegion(new Texture("objects/weapons/sword.png")),"oups", 5), Item.Type.EQUIPMENT);
+    LinkedHashMap<String,Item<? extends Stuff>> equipeItemMap1 = new LinkedHashMap<String,Item<? extends Stuff>>(){{
+        put("Head",map1H);
+        put("Torso",map1B);
+        put("Arm",map1G);
+        put("Leg",map1L);
+        put("Foot",map1F);
+        put("Weapon",map1S);
+    }};
+    LinkedHashMap<String,Integer> nameValueStatMap1 = new LinkedHashMap<String,Integer>(){{
+        put("Statistique",0);
+        put("Niveau",6);
+        put("Exp",300);
+        put("Point disponible",0);
+        put("HP",1);
+        put("Defense",1);
+        put("Attaque",61);
+        put("Agilite",1);
+        put("Endurence",1);
+        put("Mana",1);
+    }};
 
     //list
     private LinkedHashMap<Item<? extends Stuff>,Integer> InventoryItem;
@@ -473,9 +503,18 @@ public class InventoryPlayer {
             this.reload = false;
             this.showInventory = !showInventory;
         }
-
+        //item cheat
         if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("Numpad 0"))) {
-            //addInventory(cheat.getObject());
+            addInventory(cheatW.getObject());
+            addInventory(cheatA.getObject());
+        }
+        //item map1 + stat fin map 1
+        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("Numpad 1"))) {
+            setEquipeItem(equipeItemMap1);
+            setNameValueStat(nameValueStatMap1);
+            applyStat();
+            this.player.setHp(this.player.getMaxHp());
+            this.player.setPosition(new Vector2(11500,800));
         }
 
     }

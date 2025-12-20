@@ -428,10 +428,16 @@ public abstract class Character extends Entity {
         }
 
         if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("1"))) {
-            //this.setPosition(new Vector2(11500,800));
+            this.setPosition(new Vector2(11500,800));
+        }
+        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("2"))) {
+            this.setPosition(new Vector2(2390, 3394));
+        }
+        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("3"))) {
+            this.setPosition(new Vector2(11500,800));
         }
         if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf(";"))) {
-            //System.out.println(player.getPosition());
+            System.out.println(player.getPosition());
             //this.setPosition(new Vector2(11500,800));
         }
 

@@ -26,13 +26,74 @@ public class DungeonWorld extends BaseWorld{
         boss.setBoss();
         mobs.add(boss);
 
-        //mobs.add(factory.createMob("gorgon", 1200, 400, this, 1));
-        //mobs.add(factory.createMob("gorgon", 880, 400, this, 1));
+        mobs.add(factory.createMob("gorgon", 1209,130, this, 8));
+        mobs.add(factory.createMob("gorgon", 1484,130, this, 8));
+        mobs.add(factory.createMob("minotaur", 1727,130, this, 8));
+        mobs.add(factory.createMob("gorgon", 1976,226, this, 10));
+        mobs.add(factory.createMob("minotaur", 2231,226, this, 10));
+        mobs.add(factory.createMob("minotaur", 2723,322, this, 10));
+        mobs.add(factory.createMob("gorgon",2887,322,this,11));
+        mobs.add(factory.createMob("gorgon",3150,322,this,11));
+        mobs.add(factory.createMob("minotaur",3333,322,this,12));
+        mobs.add(factory.createMob("minotaur",3497,322,this,12));
+        mobs.add(factory.createMob("gorgon", 3890,466, this, 25)); //boosted
+        mobs.add(factory.createMob("gorgon", 5228,898, this, 12)); //SUR PLATEFORME
+        mobs.add(factory.createMob("minotaur",4880,946,this,1));
+        mobs.add(factory.createMob("gorgon",4710,946,this,1));
+        mobs.add(factory.createMob("minotaur",4651,946,this,1));
+        mobs.add(factory.createMob("minotaur",4592,946,this,1));
+        mobs.add(factory.createMob("gorgon",4481,946,this,1));
+        mobs.add(factory.createMob("gorgon",4395,946,this,1));
+        mobs.add(factory.createMob("minotaur",4317,946,this,1));
+        mobs.add(factory.createMob("gorgon",4186,946,this,1));
+        mobs.add(factory.createMob("gorgon",3956,946,this,1));
+        mobs.add(factory.createMob("gorgon",3792,946,this,1));
+        mobs.add(factory.createMob("minotaur",3641,946,this,1));
+        mobs.add(factory.createMob("minotaur",3523,946,this,1));
+        mobs.add(factory.createMob("gorgon", 2920,946, this, 1)); //boosted
+        mobs.add(factory.createMob("gorgon",2428,946, this, 1)); //boosted
+        mobs.add(factory.createMob("gorgon",2061,946, this, 1)); //boosted
+        
+        mobs.add(factory.createMob("minotaur",2264,1522,this,1));
+        mobs.add(factory.createMob("minotaur",2300,1522,this,1));
+        mobs.add(factory.createMob("minotaur",2400,1522,this,1));
+        mobs.add(factory.createMob("minotaur",2500,1522,this,1));
+        mobs.add(factory.createMob("minotaur",2600,1522,this,1));
+        mobs.add(factory.createMob("minotaur",2700,1522,this,1));
+        mobs.add(factory.createMob("minotaur",2800,1522,this,1));
+        mobs.add(factory.createMob("minotaur",2900,1522,this,1));
+        mobs.add(factory.createMob("minotaur",3000,1522,this,1));
+        mobs.add(factory.createMob("minotaur",4000,1522,this,1));//boosted
+        mobs.add(factory.createMob("minotaur",5000,1522,this,1));
+        mobs.add(factory.createMob("minotaur",5100,1522,this,1));
+        mobs.add(factory.createMob("minotaur",5200,1522,this,1));
+        mobs.add(factory.createMob("minotaur",5300,1522,this,1));
+        mobs.add(factory.createMob("minotaur",5438,1522,this,1));
+        
+        mobs.add(factory.createMob("gorgon",5058,2002,this,1));
+        mobs.add(factory.createMob("minotaur",4750,2002,this,1));
+        mobs.add(factory.createMob("gorgon",4409,2002,this,1));
+        mobs.add(factory.createMob("gorgon",3064,2530, this, 1)); //boosted
+        mobs.add(factory.createMob("gorgon",4658,2866, this, 1)); //boosted
+        mobs.add(factory.createMob("gorgon",5130,2866, this, 1)); //boosted
+        //début en ajouter plus
+        mobs.add(factory.createMob("gorgon",5136,3394, this, 1));
+        mobs.add(factory.createMob("gorgon",2684, 3394, this, 1));        
+        //din de en ajouter plus
     }
 
     @Override
-    protected void initObjects() {
+    protected void initObjects() throws FactoryException{
 
+        gameObjects.add(factory.createObject("ironfoot", 3340,621, null,1));
+        gameObjects.add(factory.createObject("ironfoot", 5180,369, null,1));
+        gameObjects.add(factory.createObject("ironfoot", 3530,945, null,1));
+        gameObjects.add(factory.createObject("ironfoot", 1960,1434, null,1));
+        gameObjects.add(factory.createObject("ironfoot", 2671,2625, null,1));
+        gameObjects.add(factory.createObject("ironfoot", 5405,3245, null,1));
+        
+
+        //porte suivante
         SpecialDoor door = (SpecialDoor) factory.createSpecialDoor("special_door", 1856, 3394, this, game.hellWorld);
         door.setParentWorld(this);
         door.setSpawnPosition(550, 3800); // Position d'arrivée dans HellWorld
