@@ -14,7 +14,7 @@ public abstract class Torso extends Armor{
         this.specialPerk = null;
         this.health = 20*lvl;
         this.defense = 10*lvl;
-        this.agility = -3*lvl;
+        this.agility = -10*lvl;
 
     }
 
@@ -33,6 +33,6 @@ public abstract class Torso extends Armor{
         this.specialPerk = specialPerk;
         this.health = 20*lvl;
         this.defense = 10*lvl;
-        this.agility = -3*lvl;
+        this.agility = -10*lvl;
     }
 }

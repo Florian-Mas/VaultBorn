@@ -83,6 +83,34 @@ public class InventoryPlayer {
         put("Mana",1);
     }};
 
+    //item map1 + lvl for dev
+    Item<? extends Stuff> map2H = new Item<>(new Helmet(new Vector2(0,0),new TextureRegion(new Texture("objects/armor/Helmet.png")),"oups", 30), Item.Type.EQUIPMENT);
+    Item<? extends Stuff> map2G = new Item<>(new GauteletPlate(new Vector2(0,0),new TextureRegion(new Texture("objects/armor/GauteletPlate.png")),"oups", 30), Item.Type.EQUIPMENT);
+    Item<? extends Stuff> map2B = new Item<>(new Breastplate(new Vector2(0,0),new TextureRegion(new Texture("objects/armor/Breastplate.png")),"oups", 30), Item.Type.EQUIPMENT);
+    Item<? extends Stuff> map2L = new Item<>(new LegPlate(new Vector2(0,0),new TextureRegion(new Texture("objects/armor/LegPlate.png")),"oups", 30), Item.Type.EQUIPMENT);
+    Item<? extends Stuff> map2F = new Item<>(new IronFoot(new Vector2(0,0),new TextureRegion(new Texture("objects/armor/IronFoot.png")),"oups", 20), Item.Type.EQUIPMENT);
+    Item<? extends Stuff> map2S = new Item<>(new Sword(new Vector2(0,0),new TextureRegion(new Texture("objects/weapons/sword.png")),"oups", 40), Item.Type.EQUIPMENT);
+    LinkedHashMap<String,Item<? extends Stuff>> equipeItemMap2 = new LinkedHashMap<String,Item<? extends Stuff>>(){{
+        put("Head",map2H);
+        put("Torso",map2B);
+        put("Arm",map2G);
+        put("Leg",map2L);
+        put("Foot",map2F);
+        put("Weapon",map2S);
+    }};
+    LinkedHashMap<String,Integer> nameValueStatMap2 = new LinkedHashMap<String,Integer>(){{
+        put("Statistique",0);
+        put("Niveau",24);
+        put("Exp",368);
+        put("Point disponible",0);
+        put("HP",1);
+        put("Defense",1);
+        put("Attaque",241);
+        put("Agilite",1);
+        put("Endurence",1);
+        put("Mana",1);
+    }};
+
     //list
     private LinkedHashMap<Item<? extends Stuff>,Integer> InventoryItem;
     private List<Item<? extends Stuff>> InventoryItemList = new ArrayList<>();
@@ -503,6 +531,21 @@ public class InventoryPlayer {
             this.reload = false;
             this.showInventory = !showInventory;
         }
+        //tp
+        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("1"))) {
+            this.player.setPosition(new Vector2(11500,800));
+        }
+        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("2"))) {
+            this.player.setPosition(new Vector2(2390, 3394));
+        }
+        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("3"))) {
+            this.player.setPosition(new Vector2(11500,800));
+        }
+        //position
+        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf(";"))) {
+            System.out.println(player.getPosition());
+            //this.setPosition(new Vector2(11500,800));
+        }
         //item cheat
         if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("Numpad 0"))) {
             addInventory(cheatW.getObject());
@@ -515,6 +558,14 @@ public class InventoryPlayer {
             applyStat();
             this.player.setHp(this.player.getMaxHp());
             this.player.setPosition(new Vector2(11500,800));
+        }
+        //item map1 + stat fin map 2
+        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("Numpad 2"))) {
+            setEquipeItem(equipeItemMap2);
+            setNameValueStat(nameValueStatMap2);
+            applyStat();
+            this.player.setHp(this.player.getMaxHp());
+            this.player.setPosition(new Vector2(2390, 3394));
         }
 
     }
