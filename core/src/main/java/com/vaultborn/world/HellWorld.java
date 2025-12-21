@@ -57,82 +57,82 @@ public class HellWorld extends BaseWorld {
 
     @Override
     protected void initMobs() throws FactoryException {
-        mobs.add(factory.createMob("gorgon", 1000, 3800, this, 1));
+        mobs.add(factory.createMob("gorgon", 1000, 3800, this, 50));
 
-        mobs.add(factory.createMob("minotaur", 1900, 3800, this, 1));
-        mobs.add(factory.createMob("minotaur", 1070, 3600, this, 1));
-        mobs.add(factory.createMob("minotaur", 2000, 3600, this, 1));
+        mobs.add(factory.createMob("minotaur", 1900, 3800, this, 50));
+        mobs.add(factory.createMob("minotaur", 1070, 3600, this, 60));
+        mobs.add(factory.createMob("minotaur", 2000, 3600, this, 60));
 
-        mobs.add(factory.createMob("gorgon", 2900, 3600, this,1));
-        mobs.add(factory.createMob("minotaur", 2950, 3600, this, 1));
-        mobs.add(factory.createMob("gorgon", 3100, 3600, this, 1));
-        mobs.add(factory.createMob("minotaur", 3300, 3600, this,1));
-        mobs.add(factory.createMob("gorgon", 3400, 3600, this,1));
+        mobs.add(factory.createMob("gorgon", 2900, 3600, this,55));
+        mobs.add(factory.createMob("minotaur", 2950, 3600, this, 55));
+        mobs.add(factory.createMob("gorgon", 3100, 3600, this, 55));
+        mobs.add(factory.createMob("yokai", 3300, 3600, this,55));
+        mobs.add(factory.createMob("gorgon", 3400, 3600, this,55));
 
-        mobs.add(factory.createMob("gorgon", 2900, 2800, this, 1));
-        mobs.add(factory.createMob("gorgon", 3000, 2800, this, 1));
-        mobs.add(factory.createMob("minotaur", 3100, 2800, this, 1));
-        mobs.add(factory.createMob("minotaur", 3300, 2800, this, 1));
-        mobs.add(factory.createMob("minotaur", 3700, 2800, this, 1));
+        mobs.add(factory.createMob("gorgon", 2900, 2800, this, 60));
+        mobs.add(factory.createMob("gorgon", 3000, 2800, this, 60));
+        mobs.add(factory.createMob("minotaur", 3100, 2800, this, 60));
+        mobs.add(factory.createMob("minotaur", 3300, 2800, this, 60));
+        mobs.add(factory.createMob("minotaur", 3700, 2800, this, 60));
 
-        mobs.add(factory.createMob("gorgon", 100, 2500, this, 1));
-        mobs.add(factory.createMob("minotaur", 200, 2500, this, 1));
-        mobs.add(factory.createMob("minotaur", 300, 2500, this, 1));
-        mobs.add(factory.createMob("minotaur", 800, 2800, this, 1));
-        mobs.add(factory.createMob("minotaur", 900, 2800, this, 1));
-        mobs.add(factory.createMob("gorgon", 1000, 2800, this, 1));
-        mobs.add(factory.createMob("gorgon", 1100, 2800, this, 1));
-        mobs.add(factory.createMob("gorgon", 1300, 2800, this, 1));
-
-
-        mobs.add(factory.createMob("gorgon", 1100, 2300, this, 1));
-        mobs.add(factory.createMob("gorgon", 1200, 2300, this, 1));
-        mobs.add(factory.createMob("minotaur", 1300, 2300, this, 1));
-        mobs.add(factory.createMob("minotaur", 1400, 2300, this, 1));
-        mobs.add(factory.createMob("minotaur", 1500, 2300, this, 1));
-        mobs.add(factory.createMob("minotaur", 1600, 2300, this, 1));
-        mobs.add(factory.createMob("minotaur", 1700, 2300, this, 1));
-        mobs.add(factory.createMob("minotaur", 1800, 2300, this, 1));
-        mobs.add(factory.createMob("minotaur", 1900, 2300, this, 1));
-        mobs.add(factory.createMob("minotaur", 2900, 2300, this, 1));
-        mobs.add(factory.createMob("minotaur", 2950, 2300, this, 1));
-        mobs.add(factory.createMob("gorgon", 3100, 2300, this, 1));
-        mobs.add(factory.createMob("gorgon", 3300, 2300, this, 1));
-        mobs.add(factory.createMob("gorgon", 3400, 2300, this, 1));
+        mobs.add(factory.createMob("gorgon", 100, 2500, this, 70));
+        mobs.add(factory.createMob("minotaur", 200, 2500, this, 70));
+        mobs.add(factory.createMob("minotaur", 300, 2500, this, 70));
+        mobs.add(factory.createMob("minotaur", 800, 2800, this, 70));
+        mobs.add(factory.createMob("minotaur", 900, 2800, this, 70));
+        mobs.add(factory.createMob("gorgon", 1000, 2800, this, 70));
+        mobs.add(factory.createMob("gorgon", 1100, 2800, this, 70));
+        mobs.add(factory.createMob("yokai", 1300, 2800, this, 70));
 
 
-        mobs.add(factory.createMob("gorgon", 1100, 1900, this, 1));
-        mobs.add(factory.createMob("gorgon", 1200, 1900, this, 1));
-        mobs.add(factory.createMob("gorgon", 1300, 1900, this, 1));
-        mobs.add(factory.createMob("gorgon", 1400, 1900, this, 1));
+        mobs.add(factory.createMob("gorgon", 1100, 2300, this, 75));
+        mobs.add(factory.createMob("gorgon", 1200, 2300, this, 75));
+        mobs.add(factory.createMob("minotaur", 1300, 2300, this, 75));
+        mobs.add(factory.createMob("minotaur", 1400, 2300, this, 80));
+        mobs.add(factory.createMob("minotaur", 1500, 2300, this, 80));
+        mobs.add(factory.createMob("minotaur", 1600, 2300, this, 80));
+        mobs.add(factory.createMob("minotaur", 1700, 2300, this, 80));
+        mobs.add(factory.createMob("minotaur", 1800, 2300, this, 80));
+        mobs.add(factory.createMob("minotaur", 1900, 2300, this, 80));
+        mobs.add(factory.createMob("minotaur", 2900, 2300, this, 80));
+        mobs.add(factory.createMob("minotaur", 2950, 2300, this, 80));
+        mobs.add(factory.createMob("gorgon", 3100, 2300, this, 80));
+        mobs.add(factory.createMob("gorgon", 3300, 2300, this, 100));
+        mobs.add(factory.createMob("yokai", 3400, 2300, this, 100));
 
-        mobs.add(factory.createMob("gorgon", 420, 800, this, 1));
-        mobs.add(factory.createMob("gorgon", 520, 800, this, 1));
-        mobs.add(factory.createMob("gorgon", 620, 800, this, 1));
-        mobs.add(factory.createMob("gorgon", 760, 800, this, 1));
-        mobs.add(factory.createMob("gorgon", 810, 800, this, 1));
-        mobs.add(factory.createMob("gorgon", 1000, 800, this, 1));
 
-        mobs.add(factory.createMob("gorgon", 420, 100, this, 1)); // le boss
-        mobs.add(factory.createMob("gorgon", 520, 100, this, 1));
-        mobs.add(factory.createMob("gorgon", 620, 100, this, 1));
-        mobs.add(factory.createMob("gorgon", 760, 100, this, 1));
-        mobs.add(factory.createMob("gorgon", 810, 100, this, 1));
-        mobs.add(factory.createMob("gorgon", 1000, 100, this, 1));
+        mobs.add(factory.createMob("gorgon", 1100, 1900, this, 90));
+        mobs.add(factory.createMob("gorgon", 1200, 1900, this, 90));
+        mobs.add(factory.createMob("gorgon", 1300, 1900, this, 90));
+        mobs.add(factory.createMob("gorgon", 1400, 1900, this, 90));
 
-        mobs.add(factory.createMob("minotaur", 1500, 100, this, 1));
-        mobs.add(factory.createMob("minotaur", 1800, 100, this, 1));
-        mobs.add(factory.createMob("minotaur", 2100, 100, this, 1));
-        mobs.add(factory.createMob("minotaur", 2300, 100, this, 1));
-        mobs.add(factory.createMob("minotaur", 2500, 100, this, 1));
-        mobs.add(factory.createMob("minotaur", 3000, 100, this, 1));
+        mobs.add(factory.createMob("gorgon", 420, 800, this, 100));
+        mobs.add(factory.createMob("gorgon", 520, 800, this, 100));
+        mobs.add(factory.createMob("gorgon", 620, 800, this, 100));
+        mobs.add(factory.createMob("gorgon", 760, 800, this, 100));
+        mobs.add(factory.createMob("yokai", 810, 800, this, 100));
+        mobs.add(factory.createMob("gorgon", 1000, 800, this, 100));
 
-        mobs.add(factory.createMob("gorgon", 3100, 100, this, 1));
-        mobs.add(factory.createMob("gorgon", 3200, 100, this, 1));
-        mobs.add(factory.createMob("minotaur", 3400, 100, this, 1));
-        mobs.add(factory.createMob("minotaur", 3500, 100, this, 1));
-        mobs.add(factory.createMob("gorgon", 3800, 100, this, 1));
-        Mob boss = factory.createMob("tengu", 3900, 100, this, 1);
+        mobs.add(factory.createMob("gorgon", 420, 100, this, 100));
+        mobs.add(factory.createMob("gorgon", 520, 100, this, 100));
+        mobs.add(factory.createMob("gorgon", 620, 100, this, 100));
+        mobs.add(factory.createMob("gorgon", 760, 100, this, 100));
+        mobs.add(factory.createMob("gorgon", 810, 100, this, 100));
+        mobs.add(factory.createMob("gorgon", 1000, 100, this, 100));
+
+        mobs.add(factory.createMob("minotaur", 1500, 100, this, 100));
+        mobs.add(factory.createMob("minotaur", 1800, 100, this, 100));
+        mobs.add(factory.createMob("minotaur", 2100, 100, this, 100));
+        mobs.add(factory.createMob("minotaur", 2300, 100, this, 1000));//op
+        mobs.add(factory.createMob("minotaur", 2500, 100, this, 100));
+        mobs.add(factory.createMob("minotaur", 3000, 100, this, 100));
+
+        mobs.add(factory.createMob("gorgon", 3100, 100, this, 100));
+        mobs.add(factory.createMob("gorgon", 3200, 100, this, 100));
+        mobs.add(factory.createMob("minotaur", 3400, 100, this, 100));
+        mobs.add(factory.createMob("minotaur", 3500, 100, this, 100));
+        mobs.add(factory.createMob("gorgon", 3800, 100, this, 100));
+        Mob boss = factory.createMob("tengu", 3900, 100, this, 100);
         boss.setBoss();
         mobs.add(boss);
 
@@ -140,12 +140,11 @@ public class HellWorld extends BaseWorld {
 
     @Override
     protected void initObjects() throws FactoryException {
-        gameObjects.add(factory.createObject("sword", 3100, 4200, this,20));
-        gameObjects.add(factory.createObject("helmet", 4100, 2500, this,10));
-        gameObjects.add(factory.createObject("sword", 3050, 1750, this,10));
-        gameObjects.add(factory.createObject("ironfoot", 450, 1400, this,10));
-        gameObjects.add(factory.createObject("legplate", 150, 1200, this,10));
-        gameObjects.add(factory.createObject("breastplate", 3150, 1050, this,10));
+        gameObjects.add(factory.createObject("legplate", 3100, 4200, this,60));
+        gameObjects.add(factory.createObject("helmet", 4100, 2500, this,60));
+        gameObjects.add(factory.createObject("sword", 3050, 1750, this,70));
+        gameObjects.add(factory.createObject("ironfoot", 84, 685, this,60));
+        gameObjects.add(factory.createObject("breastplate", 2346, 1000, this,60));
         SpecialDoor door = (SpecialDoor) factory.createSpecialDoor("special_door", 80, 50, this, game.forestWorld);
         door.setParentWorld(this);
         door.setSpawnPosition(500, 580);

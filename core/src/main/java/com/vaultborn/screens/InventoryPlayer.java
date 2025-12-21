@@ -83,7 +83,7 @@ public class InventoryPlayer {
         put("Mana",1);
     }};
 
-    //item map1 + lvl for dev
+    //item map2 + lvl for dev
     Item<? extends Stuff> map2H = new Item<>(new Helmet(new Vector2(0,0),new TextureRegion(new Texture("objects/armor/Helmet.png")),"oups", 30), Item.Type.EQUIPMENT);
     Item<? extends Stuff> map2G = new Item<>(new GauteletPlate(new Vector2(0,0),new TextureRegion(new Texture("objects/armor/GauteletPlate.png")),"oups", 30), Item.Type.EQUIPMENT);
     Item<? extends Stuff> map2B = new Item<>(new Breastplate(new Vector2(0,0),new TextureRegion(new Texture("objects/armor/Breastplate.png")),"oups", 30), Item.Type.EQUIPMENT);
@@ -106,6 +106,33 @@ public class InventoryPlayer {
         put("HP",1);
         put("Defense",1);
         put("Attaque",241);
+        put("Agilite",1);
+        put("Endurence",1);
+        put("Mana",1);
+    }};
+    //item map3 + lvl for dev
+    Item<? extends Stuff> map3H = new Item<>(new Helmet(new Vector2(0,0),new TextureRegion(new Texture("objects/armor/Helmet.png")),"oups", 60), Item.Type.EQUIPMENT);
+    Item<? extends Stuff> map3G = new Item<>(new GauteletPlate(new Vector2(0,0),new TextureRegion(new Texture("objects/armor/GauteletPlate.png")),"oups", 60), Item.Type.EQUIPMENT);
+    Item<? extends Stuff> map3B = new Item<>(new Breastplate(new Vector2(0,0),new TextureRegion(new Texture("objects/armor/Breastplate.png")),"oups", 60), Item.Type.EQUIPMENT);
+    Item<? extends Stuff> map3L = new Item<>(new LegPlate(new Vector2(0,0),new TextureRegion(new Texture("objects/armor/LegPlate.png")),"oups", 60), Item.Type.EQUIPMENT);
+    Item<? extends Stuff> map3F = new Item<>(new IronFoot(new Vector2(0,0),new TextureRegion(new Texture("objects/armor/IronFoot.png")),"oups", 60), Item.Type.EQUIPMENT);
+    Item<? extends Stuff> map3S = new Item<>(new Sword(new Vector2(0,0),new TextureRegion(new Texture("objects/weapons/sword.png")),"oups", 100), Item.Type.EQUIPMENT);
+    LinkedHashMap<String,Item<? extends Stuff>> equipeItemMap3 = new LinkedHashMap<String,Item<? extends Stuff>>(){{
+        put("Head",map3H);
+        put("Torso",map3B);
+        put("Arm",map3G);
+        put("Leg",map3L);
+        put("Foot",map3F);
+        put("Weapon",map3S);
+    }};
+    LinkedHashMap<String,Integer> nameValueStatMap3 = new LinkedHashMap<String,Integer>(){{
+        put("Statistique",0);
+        put("Niveau",60);
+        put("Exp",368);
+        put("Point disponible",0);
+        put("HP",1);
+        put("Defense",1);
+        put("Attaque",601);
         put("Agilite",1);
         put("Endurence",1);
         put("Mana",1);
@@ -539,7 +566,7 @@ public class InventoryPlayer {
             this.player.setPosition(new Vector2(2390, 3394));
         }
         if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("3"))) {
-            this.player.setPosition(new Vector2(11500,800));
+            this.player.setPosition(new Vector2(3900, 100));
         }
         //position
         if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf(";"))) {
@@ -559,13 +586,21 @@ public class InventoryPlayer {
             this.player.setHp(this.player.getMaxHp());
             this.player.setPosition(new Vector2(11500,800));
         }
-        //item map1 + stat fin map 2
+        //item map2 + stat fin map 2
         if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("Numpad 2"))) {
             setEquipeItem(equipeItemMap2);
             setNameValueStat(nameValueStatMap2);
             applyStat();
             this.player.setHp(this.player.getMaxHp());
             this.player.setPosition(new Vector2(2390, 3394));
+        }
+        //item map3 + stat fin map 3
+        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("Numpad 3"))) {
+            setEquipeItem(equipeItemMap3);
+            setNameValueStat(nameValueStatMap3);
+            applyStat();
+            this.player.setHp(this.player.getMaxHp());
+            this.player.setPosition(new Vector2(3900, 100));
         }
 
     }
