@@ -85,7 +85,7 @@ public class GameScreen implements Screen {
 
         } else {
             if(!SettingMenuScreen.isActivated()){
-
+                inv.setAdminCheat(SettingMenuScreen.isAdminCheatActivated());
                 if(btnSkin != SettingMenuScreen.getSkin()){
                     this.btnSkin = SettingMenuScreen.getSkin();
                     PauseMenuScreen.reloadMenu(game,this.btnSkin, buttonPause,inputManager);

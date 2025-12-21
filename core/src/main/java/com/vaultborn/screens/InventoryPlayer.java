@@ -49,6 +49,7 @@ import java.util.HashMap;
 import java.lang.SuppressWarnings;
 
 public class InventoryPlayer {
+    private boolean adminCheat;
     private Player player;
     private boolean putIn;
     Item<? extends Stuff> nonItemEquip = new Item<>(null, Item.Type.EQUIPMENT);
@@ -237,6 +238,9 @@ public class InventoryPlayer {
     }
 
     //setter dans inventory
+    public void setAdminCheat(boolean a){
+        adminCheat =  a;
+    }
     public void addInventory(Stuff obj){
         Item<? extends Stuff> object;
         if(obj instanceof Weapon){
@@ -558,51 +562,53 @@ public class InventoryPlayer {
             this.reload = false;
             this.showInventory = !showInventory;
         }
-        //tp
-        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("1"))) {
-            this.player.setPosition(new Vector2(11500,800));
+        //admin element après konamicode
+        if(adminCheat){
+            //tp
+            if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("1"))) {
+                this.player.setPosition(new Vector2(11500,800));
+            }
+            if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("2"))) {
+                this.player.setPosition(new Vector2(2390, 3394));
+            }
+            if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("3"))) {
+                this.player.setPosition(new Vector2(3900, 100));
+            }
+            //position
+            if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf(";"))) {
+                System.out.println(player.getPosition());
+                //this.setPosition(new Vector2(11500,800));
+            }
+            //item cheat
+            if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("Numpad 0"))) {
+                addInventory(cheatW.getObject());
+                addInventory(cheatA.getObject());
+            }
+            //item map1 + stat fin map 1
+            if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("Numpad 1"))) {
+                setEquipeItem(equipeItemMap1);
+                setNameValueStat(nameValueStatMap1);
+                applyStat();
+                this.player.setHp(this.player.getMaxHp());
+                this.player.setPosition(new Vector2(11500,800));
+            }
+            //item map2 + stat fin map 2
+            if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("Numpad 2"))) {
+                setEquipeItem(equipeItemMap2);
+                setNameValueStat(nameValueStatMap2);
+                applyStat();
+                this.player.setHp(this.player.getMaxHp());
+                this.player.setPosition(new Vector2(2390, 3394));
+            }
+            //item map3 + stat fin map 3
+            if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("Numpad 3"))) {
+                setEquipeItem(equipeItemMap3);
+                setNameValueStat(nameValueStatMap3);
+                applyStat();
+                this.player.setHp(this.player.getMaxHp());
+                this.player.setPosition(new Vector2(3900, 100));
+            }
         }
-        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("2"))) {
-            this.player.setPosition(new Vector2(2390, 3394));
-        }
-        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("3"))) {
-            this.player.setPosition(new Vector2(3900, 100));
-        }
-        //position
-        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf(";"))) {
-            System.out.println(player.getPosition());
-            //this.setPosition(new Vector2(11500,800));
-        }
-        //item cheat
-        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("Numpad 0"))) {
-            addInventory(cheatW.getObject());
-            addInventory(cheatA.getObject());
-        }
-        //item map1 + stat fin map 1
-        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("Numpad 1"))) {
-            setEquipeItem(equipeItemMap1);
-            setNameValueStat(nameValueStatMap1);
-            applyStat();
-            this.player.setHp(this.player.getMaxHp());
-            this.player.setPosition(new Vector2(11500,800));
-        }
-        //item map2 + stat fin map 2
-        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("Numpad 2"))) {
-            setEquipeItem(equipeItemMap2);
-            setNameValueStat(nameValueStatMap2);
-            applyStat();
-            this.player.setHp(this.player.getMaxHp());
-            this.player.setPosition(new Vector2(2390, 3394));
-        }
-        //item map3 + stat fin map 3
-        if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf("Numpad 3"))) {
-            setEquipeItem(equipeItemMap3);
-            setNameValueStat(nameValueStatMap3);
-            applyStat();
-            this.player.setHp(this.player.getMaxHp());
-            this.player.setPosition(new Vector2(3900, 100));
-        }
-
     }
 
     public void applyStat(){

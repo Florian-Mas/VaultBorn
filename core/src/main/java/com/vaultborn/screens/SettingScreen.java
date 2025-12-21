@@ -48,6 +48,10 @@ public class SettingScreen {
     private Table inputTable;
     private Table bottomRightTable;
 
+    private boolean adminCheatActivated = false;
+    private String[] konamiCode = {"Up","Up","Down","Down","Left","Right","Left","Right","B","Q"};
+    private int konamiCodeProgress = 0;
+
 
     LinkedHashMap<String,Skin> SkinList = new LinkedHashMap<String,Skin>(){{
         put("neon",new Skin(Gdx.files.internal("menu/neon/skin/neon-ui.json")));
@@ -283,6 +287,9 @@ public class SettingScreen {
 public boolean isActivated(){
         return activated;
     }
+    public boolean isAdminCheatActivated(){
+        return adminCheatActivated;
+    }
     public Stage getStage(){
         return stage;
     }
@@ -313,7 +320,27 @@ public boolean isActivated(){
                 break;
         }
     }
+    public void adminCheat(){
+        if (konamiCodeProgress == konamiCode.length){
+            adminCheatActivated = !adminCheatActivated;
+            System.out.println("konamicode");
+            konamiCodeProgress = 0;
+        }
+        if (Gdx.input.isKeyJustPressed(Input.Keys.ANY_KEY)){
+            if (Gdx.input.isKeyJustPressed(Input.Keys.valueOf(konamiCode[konamiCodeProgress]))) {
+                //System.out.println("progress");
+                konamiCodeProgress++;
+            }
+            else{
+                //System.out.println("reset");
+                konamiCodeProgress = 0;
+            }
+        }
+    }
+
+
     public void rdMenu(float delta) {
+        adminCheat();
         if(!changeInput){
             Gdx.input.setInputProcessor(stage);
             Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
